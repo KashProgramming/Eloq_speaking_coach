@@ -1,25 +1,10 @@
-# Eloq - AI-Powered Public Speaking & English Fluency Coach
+# Eloq - AI-Powered Public Speaking & Fluency Coach
 
 > Transform your speaking skills through AI-driven practice, real-time feedback, and immersive roleplay scenarios.
 
 ---
 
-## 📖 Table of Contents
-
-- [Overview](#overview)
-- [The Problem](#the-problem)
-- [The Solution](#the-solution)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Features Deep Dive](#features-deep-dive)
-- [Security](#security)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-
----
-
-## 🎯 Overview
+## Overview
 
 **Eloq** is a comprehensive web application designed to help users improve their public speaking and English fluency through:
 
@@ -60,9 +45,28 @@ All from the comfort of your browser, at your own pace.
 
 ---
 
+## 📸 Screenshots
+
+### Practice Mode
+![Practice Mode](docs/screenshots/practice.png)
+
+### Feedback Page
+![Feedback](docs/screenshots/feedback.png)
+
+### Roleplay Mode
+![Roleplay](docs/screenshots/roleplay.png)
+
+### Progress Dashboard
+![Progress](docs/screenshots/progress.png)
+
+### History View
+![History](docs/screenshots/history.png)
+
+---
+
 ## 🌟 Key Features
 
-### 🎤 Daily Practice Mode
+### Daily Practice Mode
 - **Smart Prompt Selection**: Get prompts matched to your skill level (beginner → intermediate → advanced)
 - **Audio Recording**: Record your response directly in the browser (30s - 3min)
 - **Real-time Transcription**: Powered by OpenAI Whisper for accurate speech-to-text
@@ -74,7 +78,7 @@ All from the comfort of your browser, at your own pace.
 - **Ideal Answer Generation**: See a polished version of your response with TTS audio
 - **Retry System**: Practice the same prompt up to 3 times with comparison metrics
 
-### 🎭 Roleplay Mode
+### Roleplay Mode
 - **Three Scenarios**:
   - **Interview**: Practice answering common interview questions
   - **Debate**: Argue your position on controversial topics
@@ -90,7 +94,7 @@ All from the comfort of your browser, at your own pace.
   - Performance breakdown across all 4 dimensions
   - Strengths and areas to improve
 
-### 📊 Progress Dashboard
+### Progress Dashboard
 - **Streak Counter**: Track consecutive days of practice (includes both practice and roleplay)
 - **Session Statistics**: Total sessions completed (practice + roleplay combined)
 - **Improvement Metrics**: Week-over-week percentage changes in:
@@ -99,7 +103,7 @@ All from the comfort of your browser, at your own pace.
 - **Weekly Trends**: Visual graph combining performance from both practice and roleplay sessions
 - **Level Progression**: See prompts completed and remaining in your current level
 
-### 📜 Complete History
+### Complete History
 - **Practice Sessions**: View all past practice attempts grouped by prompt
   - See all retry attempts with expandable cards
   - Compare scores across attempts
@@ -111,7 +115,7 @@ All from the comfort of your browser, at your own pace.
   - Session summaries with performance breakdown
   - Completion status tracking
 
-### ⚙️ Account Management
+### Account Management
 - **Secure Authentication**: JWT-based login with refresh tokens
 - **Password Management**: Change password with validation
 - **Account Deletion**: Permanently delete account and all data
@@ -145,7 +149,7 @@ All from the comfort of your browser, at your own pace.
 - **Audio Processing**: pydub, faster-whisper
 
 ### Infrastructure
-- **Database**: PostgreSQL (Supabase/Neon recommended)
+- **Database**: PostgreSQL (Supabase)
 - **File Storage**: Cloudinary CDN
 - **Deployment**: 
   - Backend: Hugging Face Spaces (Docker)
@@ -282,7 +286,7 @@ npm run dev
 
 ---
 
-## 🎨 Features Deep Dive
+## Features Deep Dive
 
 ### 1. Smart Prompt Selection Algorithm
 
@@ -389,41 +393,6 @@ Roleplay sessions now include the same detailed evaluation as practice mode:
 
 ---
 
-## 🚀 Deployment
-
-### Backend (Hugging Face Spaces)
-
-The backend is deployed on Hugging Face Spaces using Docker. The Dockerfile is configured to:
-- Use Python 3.10 slim image
-- Install audio processing dependencies (ffmpeg, libsndfile1)
-- Pre-download Whisper model during build
-- Expose port 7860 (HF Spaces default)
-
-**Environment Variables Required:**
-- `DATABASE_URL`: PostgreSQL connection string (Supabase recommended)
-- `JWT_SECRET_KEY`: Secret key for JWT token generation
-- `GROQ_API_KEY`: Groq API key for LLM evaluation
-- `GROQ_TTS_API_KEY`: Groq API key for text-to-speech (optional, can be same as GROQ_API_KEY)
-- `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`: Cloudinary credentials
-- `CORS_ORIGINS`: Comma-separated list of allowed origins (include your Vercel frontend URL)
-
-**Deployment Steps:**
-1. Create a new Space on Hugging Face with Docker SDK
-2. Push the `eloq/backend` directory to the Space repository
-3. Configure environment variables in Space settings
-4. The Space will automatically build and deploy
-
-### Frontend (Vercel)
-
-The frontend is deployed on Vercel with automatic deployments from the main branch.
-
-**Environment Variables Required:**
-- `VITE_API_URL`: Your Hugging Face Space URL (e.g., `https://username-spacename.hf.space`)
-
-### Database (Supabase)
-
-PostgreSQL database hosted on Supabase free tier with connection pooling enabled.
-
 ## 📈 Performance Metrics
 
 ### Expected Latency
@@ -439,57 +408,6 @@ PostgreSQL database hosted on Supabase free tier with connection pooling enabled
 - **CDN**: Audio files served from Cloudinary CDN
 - **Lazy Loading**: Audio files loaded on-demand
 - **Database Indexing**: Indexes on user_id, created_at, level
-
----
-
-## 🚀 Deployment
-
-### Backend (Hugging Face Spaces)
-
-The backend is deployed on Hugging Face Spaces using Docker. The Dockerfile is configured to:
-- Use Python 3.10 slim image
-- Install audio processing dependencies (ffmpeg, libsndfile1)
-- Pre-download Whisper model during build
-- Expose port 7860 (HF Spaces default)
-
-**Environment Variables Required:**
-- `DATABASE_URL`: PostgreSQL connection string (Supabase recommended)
-- `JWT_SECRET_KEY`: Secret key for JWT token generation
-- `GROQ_API_KEY`: Groq API key for LLM evaluation
-- `GROQ_TTS_API_KEY`: Groq API key for text-to-speech (optional, can be same as GROQ_API_KEY)
-- `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`: Cloudinary credentials
-- `CORS_ORIGINS`: Comma-separated list of allowed origins (include your Vercel frontend URL)
-
-**Deployment Steps:**
-1. Create a new Space on Hugging Face with Docker SDK
-2. Push the `eloq/backend` directory to the Space repository
-3. Configure environment variables in Space settings
-4. The Space will automatically build and deploy
-
-See `eloq/backend/README.md` for detailed deployment instructions, or `DEPLOYMENT_GUIDE.md` for a complete step-by-step guide covering backend, frontend, and database setup.
-
-### Frontend (Vercel)
-
-The frontend is deployed on Vercel with automatic deployments from the main branch.
-
-**Environment Variables Required:**
-- `VITE_API_URL`: Your Hugging Face Space URL (e.g., `https://username-spacename.hf.space`)
-
-**Deployment Steps:**
-1. Connect your GitHub repository to Vercel
-2. Set the root directory to `eloq/frontend`
-3. Configure the environment variable
-4. Deploy
-
-### Database (Supabase)
-
-PostgreSQL database hosted on Supabase free tier with connection pooling enabled.
-
-**Setup:**
-1. Create a new project on Supabase
-2. Copy the connection string (with pooling enabled)
-3. Add `?sslmode=require` to the connection string
-4. Use this as your `DATABASE_URL` environment variable
 
 ---
 
@@ -510,22 +428,3 @@ Contributions and feedback is welcome! Please follow these steps:
 - [ ] Dynamic prompts
 - [ ] Gamification (badges, achievements, XP system)
 - [ ] Mobile app version (React Native)
-
----
-
-## 📸 Screenshots
-
-### Practice Mode
-![Practice Mode](docs/screenshots/practice.png)
-
-### Feedback Page
-![Feedback](docs/screenshots/feedback.png)
-
-### Roleplay Mode
-![Roleplay](docs/screenshots/roleplay.png)
-
-### Progress Dashboard
-![Progress](docs/screenshots/progress.png)
-
-### History View
-![History](docs/screenshots/history.png)
