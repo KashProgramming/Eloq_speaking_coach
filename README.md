@@ -51,16 +51,20 @@ All from the comfort of your browser, at your own pace.
 ![Practice Mode](docs/screenshots/practice.png)
 
 ### Feedback Page
-![Feedback](docs/screenshots/feedback.png)
+![Feedback](docs/screenshots/feedback1.png)
+![Feedback](docs/screenshots/feedback2.png)
 
 ### Roleplay Mode
-![Roleplay](docs/screenshots/roleplay.png)
+![Roleplay](docs/screenshots/roleplay1.png)
+![Roleplay](docs/screenshots/roleplay2.png)
 
 ### Progress Dashboard
-![Progress](docs/screenshots/progress.png)
+![Progress](docs/screenshots/progress1.png)
+![Progress](docs/screenshots/progress2.png)
 
 ### History View
-![History](docs/screenshots/history.png)
+![History](docs/screenshots/history1.png)
+![History](docs/screenshots/history2.png)
 
 ---
 
