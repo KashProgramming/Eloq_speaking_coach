@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Microphone body -->
+  <rect x="12" y="6" width="8" height="12" rx="4" fill="#14B8A6" stroke="#14B8A6" stroke-width="1.5"/>
+  
+  <!-- Microphone stand -->
+  <path d="M16 18 L16 24" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 24 L20 24" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sound waves - left -->
+  <path d="M7 10 Q6 12 7 14" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M4 8 Q2 12 4 16" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+  
+  <!-- Sound waves - right -->
+  <path d="M25 10 Q26 12 25 14" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M28 8 Q30 12 28 16" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+  
+  <!-- Microphone details -->
+  <line x1="13" y1="9" x2="19" y2="9" stroke="#F5F1E9" stroke-width="0.5" opacity="0.3"/>
+  <line x1="13" y1="11" x2="19" y2="11" stroke="#F5F1E9" stroke-width="0.5" opacity="0.3"/>
+  <line x1="13" y1="13" x2="19" y2="13" stroke="#F5F1E9" stroke-width="0.5" opacity="0.3"/>
+</svg>
