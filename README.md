@@ -1,4 +1,4 @@
-# Eloq - AI-Powered Public Speaking & Fluency Coach
+# Eloq: AI-Powered Public Speaking & Fluency Coach
 
 > Transform your speaking skills through AI-driven practice, real-time feedback, and immersive roleplay scenarios.
 
@@ -153,7 +153,7 @@ All from the comfort of your browser, at your own pace.
 - **Audio Processing**: pydub, faster-whisper
 
 ### Infrastructure
-- **Database**: PostgreSQL (Supabase)
+- **Database**: PostgreSQL
 - **File Storage**: Cloudinary CDN
 - **Deployment**: 
   - Backend: Hugging Face Spaces (Docker)
@@ -396,34 +396,6 @@ Roleplay sessions now include the same detailed evaluation as practice mode:
 - **Headers**: All headers allowed
 
 ---
-
-## 📈 Performance Metrics
-
-### Expected Latency
-- **Prompt Loading**: < 200ms
-- **Audio Upload**: 2-5 seconds (depends on file size)
-- **Whisper Transcription**: 2-5 seconds per minute of audio
-- **LLM Evaluation**: 3-8 seconds
-- **Total Analysis**: 15-30 seconds for 2-minute audio
-
-### Optimization Strategies
-- **Caching**: LLM responses cached for ideal answers
-- **Pagination**: History endpoints paginated (50 items/page)
-- **CDN**: Audio files served from Cloudinary CDN
-- **Lazy Loading**: Audio files loaded on-demand
-- **Database Indexing**: Indexes on user_id, created_at, level
-
----
-
-## 🤝 Contributing
-
-Contributions and feedback is welcome! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/new-feature`
-3. **Commit your changes**: `git commit -m 'Add new feature'`
-4. **Push to branch**: `git push origin feature/new-feature`
-5. **Open a Pull Request**
 
 ## 🗺️ Roadmap
 
