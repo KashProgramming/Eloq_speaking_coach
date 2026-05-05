@@ -180,7 +180,7 @@ All from the comfort of your browser, at your own pace.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -245,8 +245,8 @@ VITE_API_URL=https://username-spacename.hf.space
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/eloq.git
-cd eloq
+git clone https://github.com/KashProgramming/Eloq_speaking_coach
+cd Eloq_speaking_coach
 ```
 
 #### 2. Backend Setup
@@ -397,7 +397,7 @@ Roleplay sessions now include the same detailed evaluation as practice mode:
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### Upcoming Features
 - [ ] Speech analysis with audio-level feedback
